@@ -6,32 +6,43 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
 }
-.abertura {
-    height: 500px;
+.abertura /*pra tudo ficar dentro da abertura*/{
+    height: 750px;
     position: relative;
     overflow: hidden; /*nn dx ultrapassar*/
 }
+/*position: relative;
+  - Não sai do fluxo (mantém seu espaço original na página).
+  - Move-se em relação à sua própria posição original.
+  - Muito usado como "pai" para ancorar um elemento absoluto.
+   position:absolute;
+  - Sai do fluxo (ignora o espaço dos outros elementos e flutua).
+  - Move-se em relação ao primeiro ancestral (pai) posicionado (com relative/absolute).
+  - Se não houver pai posicionado, move-se em relação à tela (body).
+*/
 
 .foto-abertura {
     width: 100%; 
     height: 100%; 
-    object-fit: cover;
-     display: block;
+    object-fit: cover; /*preenche o espaço inteiro*/
+    display: block;
     position: absolute; 
     top: 0;
     left: 0;
-    z-index: 0; 
+    z-index: 0; /*ordem q eu qro q a imagem apareça, lá atrás*/
     object-position: center 20%; 
     position: absolute;
 }
-
+/*obs: text-align alinha o texto dentro de um elemento de bloco, 
+enquanto justify-content e align-items organizam elementos filhos 
+dentro de um contêiner flexível (display: flex).*/
 
 .parte1 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: center; /*centraliza  na vertical*/
     color: white;
     z-index: 2;
     padding: 10px;
@@ -82,5 +93,77 @@ body{
     top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.701);
 }
-/*pode usar o ::before e o ::after pra colocar os tracinhos antes e depois, 
-tbm da pra usá-los*/
+/*pode usar o ::before(primeiro elemento antes doq eu colocar) e o 
+::after(ultimo elemento antes do q eu colocar) pra colocar os tracinhos antes e depois, 
+tbm da pra usá-los
+no ::before 
+-display:none; pra nn ser mostrado qnd clica pra ver o css*/
+/*-------------Teste--------------------
+.abertura h1::before{
+    content: "oi";
+}   
+.abertura h1::after{
+    content: "tchau";
+}
+    ---------bordas---------
+    border-bottom: 5px solid red;
+    border-top
+    ---------display---------
+    display:block;*/
+
+    /*-------------Aula 23/09--------------------*/
+.parte2{
+    height: 750px;
+    position: relative;
+    background-color: rgb(241, 241, 241);
+    font-family: jost, sans-serif;
+}
+nav{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.menu a{
+    margin: 8px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+}
+.aclicado{
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+}
+.tracofzms{
+    display: block;
+    width: 90px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.479);
+    margin: 10px auto;
+    
+}
+.txtp2{
+    text-align: center;
+    margin: 100px;
+}
+.parte2 p{
+    color: rgba(0, 0, 0, 0.605);
+}
+.imgsp2{
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+.imgtxt{
+ display: flex;
+  justify-content: center;
+  gap: 180px;
+}
+.spans2{
+
+}
