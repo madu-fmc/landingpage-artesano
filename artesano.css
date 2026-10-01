@@ -113,7 +113,6 @@ no ::before
 
     /*-------------Aula 23/09--------------------*/
 .parte2{
-    height: 750px;
     position: relative;
     background-color: rgb(241, 241, 241);
     font-family: jost, sans-serif;
@@ -124,7 +123,7 @@ nav{
   gap: 30px;
   background-color: rgb(255, 255, 255);
   padding: 10px;
-}
+} 
 .menu a{
     margin: 8px;
     position: relative;
@@ -143,27 +142,105 @@ nav{
     display: block;
     width: 90px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.479);
-    margin: 10px auto;
+    background-color:rgba(113, 97, 97, 0.774);
+    margin: 35px auto;
     
 }
 .txtp2{
     text-align: center;
+    max-width: 800px;      /* Limita a largura para o texto não espalhar muito */
+    margin: 80px auto;     /* O 'auto' centraliza o bloco inteiro na tela */
+    padding: 0 20px;
+    text-align: center;
     margin: 100px;
+    margin: 80px auto;
+}
+.txtp2 h2{
+    font-size: 42px;
+    font-weight: normal;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+.pt2texto{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 .parte2 p{
     color: rgba(0, 0, 0, 0.605);
 }
-.imgsp2{
-  display: flex;
-  justify-content: center;
-  gap: 200px;
+.icones {
+    display: flex;
+    justify-content: center;
+    gap: 220px;
+    margin-top: 100px;
+    opacity: 0.8;
 }
-.imgtxt{
- display: flex;
-  justify-content: center;
-  gap: 180px;
+
+.bloco-icone {
+    position: relative; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 15px;        
 }
-.spans2{
+
+.bloco-icone img {
+    width: 50px;            
+    height: auto;          
+}
+
+.bloco-icone p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.bloco-icone p::after {
+    content: "";
+    position: absolute;
+    top: 59px;              
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 40px;          
+    height: 1px;         
+    background-color:rgba(113, 97, 97, 0.774); 
+}
+
+.secaocolecoes {
+    background-color: #1d1e22;
+    color: #ffffff;
+    padding: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalhoclcs {
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: normal;
 
 }
+
+.tituloclcs {
+    font-family: 'Georgia', serif;
+    font-size: 38px;
+    font-weight: normal;
+    color: #e5e5e5;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+.subtituloclcs {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.782);
+}
+
+.tabelaclcs {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
