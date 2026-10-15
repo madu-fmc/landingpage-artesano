@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+</head>
+<style>
+section.dark{
+        background-color: #11131f;
+        color: #ffffff;
+}
+html, body{
+    margin: 0;
+    height: 100%;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table{
+    border-collapse: collapse; /*deixa sem espaço das celulas da table*/
+    
+}
+#colecoes table caption{
+    margin-bottom: 30px ;
+}
+#colecoes table th, #colecoes table td{
+    text-align: left;
+    padding: 25px; /*espaçamento*/
+    /*border-top: 1px solid #3a3d41; borda so em cima*/
+    border-bottom: 1px solid #3a3d41; /*borda so em bx*/ /**/
+}
+#colecoes{
+    min-height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 0;
+}
+#colecoes table{
+    width: 90%;
+    font-size: 25px;
+}
+#colecoes p{
+    text-align: center;
+    font-size: 24px;
+    max-width: 600px;
+}
+#colecoes a{
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding: 15px;
+    font-size: 24px;
+}
+</style>
+
+<body>
+    <img src="" alt="">
+   <section id="estudio" class="light">
+   </section>
+   
+   <section id="colecoes" class="dark">
+    <h2 class="section-title">Quatro coleções, uma por estação</h2>
+    <table>
+        <caption>Edições abertas</caption> 
+        <thead>
+            <tr>
+                <th>Coleção</th>
+                <th>Peça</th>
+                <th>Edição</th>
+                <th>Prazo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Névoa</td>
+                <td>Vaso baixo</td>
+                <td>40 un.</td>
+                <td>3 semanas</td>
+            </tr>
+            <tr>
+                <td>Névoa</td>
+                <td>Prato fundo</td>
+                <td>60 un.</td>
+                <td>3 semanas</td>
+            </tr>
+            <tr>
+                <td>Sal</td>
+                <td>Luminária de mesa</td>
+                <td>25 un.</td>
+                <td>5 semanas</td>
+            </tr>
+        </tbody>
+    </table>
+<p> Abrimos as encomendas quatro vezes por ano e fechamos quando a edição
+ acaba. Nada é refeito depois: o molde é quebrado e a coleção seguinte
+ começa do papel em branco.
+</p>
+<p>Os prazos acima contam a partir da confirmação. O frete é combinado
+peça a peça, porque nenhuma delas viaja igual.</p>
+
+<a href="#">Pedir catálogo</a>
+   </section>
+</body>
+
+</html>
