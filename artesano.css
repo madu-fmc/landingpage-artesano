@@ -94,28 +94,52 @@ body {
     padding-bottom: 80px;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+/* NOVO CSS DO MENU: Adaptado para listas (ul / li) */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 999;
   background-color: rgb(255, 255, 255);
-  padding: 10px;
-  flex-wrap: wrap;
+  width: 100%;
+  height: 60px; 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
 } 
 
-.menu a {
-    margin: 8px;
-    position: relative;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    text-align: center;
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style: none; /* Remove as bolinhas da lista */
+  width: 100%;
+  padding: 0 20px;
+  flex-wrap: wrap;
 }
 
-.aclicado {
-    color: rgb(255, 255, 255);
-    background-color: hsl(0, 0%, 100%);
+.menu-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+/* QUADRADO PERFEITO NO "A": Atrelado ao ID id="menu-logo" que o professor usou */
+#menu-logo .menu-link {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
     border: 1px solid rgb(0, 0, 0);
+    font-weight: bold;
+    min-width: 32px;  
+    height: 32px;     
+    padding: 0 6px;   
 }
 
 .tracofzms {
@@ -129,8 +153,8 @@ nav {
 .txtp2 {
     text-align: center;
     max-width: 800px;      
-    margin: 80px auto;     
-    padding: 0 20px;
+    margin: 0 auto;     
+    padding: 80px 20px;
 }
 
 .txtp2 h2 {
@@ -236,7 +260,6 @@ nav {
     text-align: left;
 }
 
-/* Linha de separação do cabeçalho */
 .topo th {
     padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -245,7 +268,6 @@ nav {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Linhas de separação de cada linha da tabela (as linhas de baixo) */
 .resto td {
     padding: 18px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -283,7 +305,6 @@ nav {
     color: #1d1e22;
 }
 
-
 @media (max-width: 768px) {
     .parte1 h1 {
         font-size: 38px;
@@ -313,7 +334,7 @@ nav {
     }
 
     .quebra-desk {
-        display: none; /* Remove quebras de linha forçadas em telas menores para o texto fluir natural */
+        display: none; 
     }
 }
 
@@ -322,8 +343,14 @@ nav {
         font-size: 28px;
     }
 
-    nav {
-        gap: 10px;
+    .menu ul {
+        gap: 8px;
+        padding: 12px 10px;
+    }
+    
+    .menu-link {
+        padding: 6px 10px;
+        font-size: 12px;
     }
 
     .icones {
@@ -333,6 +360,6 @@ nav {
     }
 
     .bloco-icone p::after {
-        display: none; /* Oculta tracinhos decorativos dos ícones se empilhados no mobile */
+        display: none; 
     }
 }
