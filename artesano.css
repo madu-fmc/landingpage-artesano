@@ -7,6 +7,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+:root{
+    --white: #fff;
+    --black: #000;
+    --cinza-1: #4a4a4a87;
+    --cinza-claro: rgba(113, 97, 97, 0.774);
+    --section-min-height:75vh;
+}
 
 .abertura {
     height: 750px;
@@ -32,7 +39,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: var(--white);
     z-index: 2;
     padding: 10px;
     width: 100%;
@@ -69,7 +76,7 @@ body {
 .traco {
     width: 60px;
     height: 1px;
-    background: rgba(255,255,255,0.5);
+    background: var(--cinza-claro);
 }
 
 .textinho1 {
@@ -94,33 +101,52 @@ body {
     padding-bottom: 80px;
 }
 
-nav {
+
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 60px; 
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+} 
+
+.menu ul {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
+  align-items: center;
+  gap: 25px;
+  list-style: none; 
+  width: 100%;
+  padding: 0 20px;
   flex-wrap: wrap;
-
-} 
-.menu{
-    position: sticky;
-    top:0;
-    z-index: 3;
 }
-.menu a {
-    margin: 8px;
-    position: relative;
+
+.menu-link {
     text-decoration: none;
-    color: rgb(0, 0, 0);
-    padding: 10px;
+    color: var(--black);
     text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 8px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
 }
 
-.aclicado {
-    color: rgb(255, 255, 255);
-    background-color: hsl(0, 0%, 100%);
-    border: 1px solid rgb(0, 0, 0);
+
+#menu-logo .menu-link {
+    color: var(--black);
+    background-color: transparent;
+    border: 1px solid var(--black);
+    font-weight: bold;
+    min-width: 32px;  
+    height: 32px;     
+    padding: 0 6px;   
 }
 
 .tracofzms {
@@ -134,8 +160,8 @@ nav {
 .txtp2 {
     text-align: center;
     max-width: 800px;      
-    margin: 80px auto;     
-    padding: 0 20px;
+    margin: 0 auto;     
+    padding: 80px 20px;
 }
 
 .txtp2 h2 {
@@ -199,7 +225,7 @@ nav {
 
 .secaocolecoes {
     background-color: #1d1e22;
-    color: #ffffff;
+    color: var(--white);
     padding: 90px 20px;
     display: flex;
     flex-direction: column;
@@ -241,7 +267,6 @@ nav {
     text-align: left;
 }
 
-/* Linha */
 .topo th {
     padding: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -250,7 +275,6 @@ nav {
     color: rgba(255, 255, 255, 0.6);
 }
 
-/* Linha*/
 .resto td {
     padding: 18px 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -270,7 +294,7 @@ nav {
     margin-bottom: 25px;
     letter-spacing: 0.5px;
 }
-/*
+
 .botaocatalogo {
     display: inline-block;
     margin-top: 20px;
@@ -281,13 +305,13 @@ nav {
     letter-spacing: 2px;
     font-size: 12px;
     transition: all 0.3s ease;
+    border-radius: 50px;
 }
 
 .botaocatalogo:hover {
     background-color: #fff;
     color: #1d1e22;
 }
-*/
 
 @media (max-width: 768px) {
     .parte1 h1 {
@@ -318,7 +342,7 @@ nav {
     }
 
     .quebra-desk {
-        display: none; /* Remove quebras de linha */
+        display: none; 
     }
 }
 
@@ -327,8 +351,14 @@ nav {
         font-size: 28px;
     }
 
-    nav {
-        gap: 10px;
+    .menu ul {
+        gap: 8px;
+        padding: 12px 10px;
+    }
+    
+    .menu-link {
+        padding: 6px 10px;
+        font-size: 12px;
     }
 
     .icones {
@@ -343,4 +373,207 @@ nav {
 }
 
 
-.abertura:nthchild(even){}
+.parte3 {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7; 
+    padding: 80px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parte3 h2 {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    font-weight: normal;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+}
+
+.contato-subtitulo {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+
+.parte3 form {
+    width: 100%;
+    max-width: 750px; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formulariotxt {
+    display: flex;
+    gap: 35px;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.formulariotxt > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.parte3 form label, 
+.parte3 form .label-block {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, 0.35);
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+
+.parte3 form input[type="text"],
+.parte3 form input[type="email"],
+.parte3 form textarea {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 15px;
+    color: #1a1a1a;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.parte3 form input::placeholder,
+.parte3 form textarea::placeholder {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.parte3 form input:focus,
+.parte3 form textarea:focus {
+    border-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Alinhamento de Radios e Checkboxes */
+.formularioradio, 
+.formulariocheckbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 35px;
+    padding-top: 5px;
+}
+
+.radio-item, 
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parte3 form .radio-item label, 
+.parte3 form .checkbox-item label {
+    margin-bottom: 0;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    letter-spacing: 0;
+    cursor: pointer;
+}
+
+
+.radio-item input,
+.checkbox-item input {
+    cursor: pointer;
+    accent-color: #1a1a1a; 
+}
+
+
+.formulariorecado {
+    margin-bottom: 45px;
+}
+
+.formulariorecado textarea {
+    height: 120px;
+    resize: none;
+}
+
+.container-botao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-enviar {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px; 
+    padding: 16px 50px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #333333;
+}
+
+.aviso-rodape {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+
+@media (max-width: 600px) {
+    .formulariotxt {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .formularioradio, 
+    .formulariocheckbox {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+.menu-mobile{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .menu-item {
+            display: none;
+        }
+    
+        .menu-item#menu-logo {
+            display: block;
+            margin: 0;
+            margin-right: auto; 
+            margin-left: 0;
+        }
+        .menu-mobile{
+            display: block;
+            margin: 0;
+        }
+    }
+
+ 
